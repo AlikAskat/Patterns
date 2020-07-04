@@ -7,13 +7,12 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-import static org.junit.jupiter.api.Assertions.*;
 
 class PatternsTest {
     private Object button;
 
     @Test
-    public void shouldSubmitRequest() {
+    public void shouldChangeOfDeliveryDate() {
         open("http://localhost:9999");
         SelenideElement form = $("[class='App_appContainer__3jRx1']");
         form.$("[placeholder='Город']").setValue("Екатеринбург");
