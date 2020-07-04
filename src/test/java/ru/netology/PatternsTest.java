@@ -9,12 +9,13 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 class PatternsTest {
+    private String App_appContainer__3jRx1;
 //    private Object button;
 
     @Test
     public void shouldChangeOfDeliveryDate() {
         open("http://localhost:9999");
-        SelenideElement form = $("[class='App_appContainer__3jRx1']");
+        SelenideElement form = $(App_appContainer__3jRx1);
         form.$("[placeholder='Город']").setValue("Екатеринбург");
         form.$("[name='name']").setValue("Василий Иванов");
         form.$("[name='phone']").setValue("+79270000000");
