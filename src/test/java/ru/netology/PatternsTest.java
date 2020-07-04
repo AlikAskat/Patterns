@@ -21,7 +21,7 @@ class PatternsTest {
         form.$("[name='phone']").setValue("+79270000000");
         form.$("[class='checkbox__box']").click();
         form.$("[class='button button_view_extra button_size_m button_theme_alfa-on-white']").click();
-        $(byText("Запланировать")).click();
+        $(byText("Забронировать")).click();
         $("[data-test-id='notification']").waitUntil(Condition.visible, 15000);
     }
 
