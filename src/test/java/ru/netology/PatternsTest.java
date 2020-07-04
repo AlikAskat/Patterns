@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 class PatternsTest {
-    private Object button;
+//    private Object button;
 
     @Test
     public void shouldChangeOfDeliveryDate() {
@@ -20,7 +20,9 @@ class PatternsTest {
         form.$("[name='phone']").setValue("+79270000000");
         form.$("[class='checkbox__box']").click();
         form.$("[class='button button_view_extra button_size_m button_theme_alfa-on-white']").click();
-        $(byText("Забронировать")).click();
+        $(byText("Запланировать")).click();
         $("[data-test-id='notification']").waitUntil(Condition.visible, 15000);
     }
+
+
 }
