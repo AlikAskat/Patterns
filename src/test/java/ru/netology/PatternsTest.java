@@ -20,7 +20,7 @@ class PatternsTest {
         form.$("[name='name']").setValue("Василий Иванов");
         form.$("[name='phone']").setValue("+79270000000");
         form.$("[class='checkbox__box']").click();
-        form.$("[class='button']").click();
+        form.$("[type='button']").click();
         $(byText("Забронировать")).click();
         $("[data-test-id='notification']").waitUntil(Condition.visible, 15000);
     }
