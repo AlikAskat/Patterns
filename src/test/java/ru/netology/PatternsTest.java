@@ -15,7 +15,7 @@ class PatternsTest {
     @Test
     public void shouldChangeOfDeliveryDate() {
         open("http://localhost:9999");
-        SelenideElement form = $("[class='appContainer']");
+        SelenideElement form = $("[class='App_appContainer__3jRx1']");
         form.$("[placeholder='Город']").setValue("Екатеринбург");
         form.$("[name='name']").setValue("Василий Иванов");
         form.$("[name='phone']").setValue("+79270000000");
