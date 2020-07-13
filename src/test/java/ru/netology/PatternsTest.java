@@ -16,9 +16,9 @@ class PatternsTest {
     public void shouldChangeOfDeliveryDate() {
         open("http://localhost:9999");
         SelenideElement form = $("[class='App_appContainer__3jRx1']");
-        form.$("[placeholder='Город']").setValue("Екатеринбург");
-        form.$("[name='name']").setValue("Василий Иванов");
-        form.$("[name='phone']").setValue("+79270000000");
+        form.$("[placeholder='Город']").setValue();
+        form.$("[name='name']").setValue();
+        form.$("[name='phone']").setValue();
         form.$("[class='checkbox__box']").click();
         form.$("[type='button']").click();
         $(byText("Забронировать")).click();
