@@ -12,11 +12,12 @@ public class AppDataGeneration {
     @RequiredArgsConstructor
 
     public static class AutoData {
-        private final String CityName;
-        private final String Date;
-        private final String UserName;
-        private final String Phone;
+        private final String cityName;
+        private final String date;
+        private final String userName;
+        private final String phone;
     }
+}
 
 //    public static AutoData getAutoData("CityName") {
 //        return new AutoData("парапам");
@@ -36,7 +37,7 @@ public class AppDataGeneration {
 //        return new AutoData("");
 //
 //    }
-}
+
 
 
 
