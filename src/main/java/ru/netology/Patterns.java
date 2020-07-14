@@ -6,6 +6,11 @@ import lombok.RequiredArgsConstructor;
 public class Patterns {
 
 
+
+    public static String getUserName(String s) {
+        return null;
+    }
+
     public static class AppDataGeneration {
         private AppDataGeneration() {
         }
