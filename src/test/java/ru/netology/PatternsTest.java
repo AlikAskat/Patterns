@@ -1,6 +1,7 @@
 package ru.netology;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import com.github.javafaker.Faker;
 import com.github.javafaker.service.FakeValuesService;
@@ -8,6 +9,7 @@ import com.github.javafaker.service.RandomService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.util.Locale;
+import java.util.prefs.AbstractPreferences;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import static com.codeborne.selenide.Selectors.byText;
@@ -52,10 +54,13 @@ class PatternsTest {
 
 
         @Test
-        void getUserName(String faker) {
-            String name = String faker(name);
+        public void getUserName(String вася_вася) {
+            AbstractPreferences faker = null;
+            faker.name();
             new Faker(new Locale("ru-RU"));
-            System.out.println(getUserName("Вася Вася"));
+            Selenide form = null;
+            form.$("[name='name']").setValue(Patterns.getUserName("['Вася Вася']"));
+            //System.out.println(getUserName("Вася Вася"));
         }
 
     }
