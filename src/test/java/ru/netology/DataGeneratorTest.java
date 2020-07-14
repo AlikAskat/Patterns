@@ -3,7 +3,6 @@ package ru.netology;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import com.github.javafaker.Faker;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Locale;
@@ -13,7 +12,15 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-class PatternsTest {
+class DataGeneratorTest {
+
+    @Test
+    public void getUserName(String вася_вася) {
+        AbstractPreferences faker = null;
+        faker.name();
+        new Faker(new Locale("ru-RU"));
+        $("[name='name']").setValue(DataGenerator.getUserName("['Вася Вася']"));
+    }
 
     @Test
     public void shouldChangeOfDeliveryDate() {
@@ -28,33 +35,6 @@ class PatternsTest {
         $("[data-test-id='notification']").waitUntil(Condition.visible, 15000);
     }
 
-    static class AppDataGenerationTest {
 
-        @BeforeEach
-        void getUp() {
-            new Faker(new Locale("ru-RU"));
-
-        }
-
-
-//        @Test
-//        public void whenLetterifyCalled__checkPatternMatches() {
-//            FakeValuesService fakeValuesService = new FakeValuesService(new Locale("ru-RU")
-//                    ,new RandomService());
-//            String name = fakeValuesService.letterify("Вася Вася");
-//            Matcher nameMatcher = Pattern.compile( "Вася Вася").matcher(name);
-//
-//        }
-
-
-        @Test
-        public void getUserName(String вася_вася) {
-            AbstractPreferences faker = null;
-            faker.name();
-            new Faker(new Locale("ru-RU"));
-            $("[name='name']").setValue(Patterns.getUserName("['Вася Вася']"));
-        }
-
-    }
 
 }
