@@ -3,10 +3,12 @@ package ru.netology;
 import com.github.javafaker.Faker;
 import com.github.javafaker.service.FakeValuesService;
 import com.github.javafaker.service.RandomService;
+import com.sun.org.apache.xpath.internal.operations.String;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Locale;
+import java.util.prefs.AbstractPreferences;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -32,4 +34,9 @@ class AppDataGenerationTest {
     }
 
 
+    @Test
+    public void getUserName(AbstractPreferences faker) {
+        faker.name().toString("Вася Вася");
+        System.out.println("Вася Вася");
+    }
 }
