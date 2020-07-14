@@ -22,6 +22,7 @@ class DataGeneratorTest {
         $("[name='name']").setValue(DataGenerator.getUserName("['Вася Вася']"));
     }
 
+
     @Test
     public void shouldChangeOfDeliveryDate() {
         open("http://localhost:9999");
@@ -34,7 +35,6 @@ class DataGeneratorTest {
         $(byText("Забронировать")).click();
         $("[data-test-id='notification']").waitUntil(Condition.visible, 15000);
     }
-
 
 
 }
