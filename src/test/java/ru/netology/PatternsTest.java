@@ -1,7 +1,6 @@
 package ru.netology;
 
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeEach;
@@ -16,8 +15,6 @@ import static com.codeborne.selenide.Selenide.open;
 
 class PatternsTest {
 
-    //private Object button;
-
     @Test
     public void shouldChangeOfDeliveryDate() {
         open("http://localhost:9999");
@@ -30,9 +27,8 @@ class PatternsTest {
         $(byText("Забронировать")).click();
         $("[data-test-id='notification']").waitUntil(Condition.visible, 15000);
     }
-    static class AppDataGenerationTest {
 
-        //private Object String;
+    static class AppDataGenerationTest {
 
         @BeforeEach
         void getUp() {
@@ -56,9 +52,7 @@ class PatternsTest {
             AbstractPreferences faker = null;
             faker.name();
             new Faker(new Locale("ru-RU"));
-            Selenide form = null;
-            form.$("[name='name']").setValue(Patterns.getUserName("['Вася Вася']"));
-            //System.out.println(getUserName("Вася Вася"));
+            $("[name='name']").setValue(Patterns.getUserName("['Вася Вася']"));
         }
 
     }
