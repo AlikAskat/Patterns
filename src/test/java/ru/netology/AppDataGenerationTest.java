@@ -11,6 +11,7 @@ import java.util.Locale;
 import java.util.prefs.AbstractPreferences;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.lang.*
 
 
 
@@ -36,7 +37,7 @@ class AppDataGenerationTest {
 
     @Test
     public void getUserName(AbstractPreferences faker) {
-        faker.name().toString("Вася Вася");
+        String name = faker.name();
         System.out.println("Вася Вася");
     }
 }
