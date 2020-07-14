@@ -27,9 +27,9 @@ class DataGeneratorTest {
     public void shouldChangeOfDeliveryDate() {
         open("http://localhost:9999");
         SelenideElement form = $("[class='App_appContainer__3jRx1']");
-        form.$("[placeholder='Город']").setValue("CityName");
-        form.$("[name='name']").setValue("UserName");
-        form.$("[name='phone']").setValue("Phone");
+        form.$("[placeholder='Город']").setValue("Тамбов");
+        form.$("[name='name']").setValue("Вася Вася");
+        form.$("[name='phone']").setValue("+79120000000");
         form.$("[class='checkbox__box']").click();
         form.$("[type='button']").click();
         $(byText("Забронировать")).click();
