@@ -61,11 +61,10 @@ class PatternsTest {
             faker.name();
             new Faker(new Locale("ru-RU"));
             Selenide form = null;
-            form.$("[name='name']").setValue(Patterns.getUserName("['Вася Вася']"));
+            form.$("[name='name']").setValue(Patterns.getUserName("['П??етя ??Петя']"));
             //System.out.println(getUserName("Вася Вася"));
         }
 
     }
-
 
 }
