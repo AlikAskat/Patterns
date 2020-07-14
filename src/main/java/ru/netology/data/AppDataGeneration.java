@@ -17,32 +17,9 @@ public class AppDataGeneration {
         private final String userName;
         private final String phone;
     }
+
+    public static String getUserName() {
+        return "Вася";
+    }
 }
-
-//    public static AutoData getAutoData("CityName") {
-//        return new AutoData("парапам");
-//    }
-//
-//    public static AutoData getOtherAutoData("Date") {
-//        return new AutoData("");
-//
-//    }
-//
-//    public static AutoData getOtherAutoData("UserName") {
-//        return new AutoData("");
-//
-//    }
-//
-//    public static AutoData getOtherAutoData("Phone") {
-//        return new AutoData("");
-//
-//    }
-
-
-
-
-
-
-
-
 
