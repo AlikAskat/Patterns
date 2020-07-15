@@ -3,6 +3,7 @@ package ru.netology;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import com.github.javafaker.Faker;
+import lombok.var;
 import org.junit.jupiter.api.Test;
 
 import java.util.Locale;
@@ -16,8 +17,11 @@ class DataGeneratorTest {
 
     @Test
     public void getUserName() {
-        AbstractPreferences faker = null;
-        faker.name();
+        //AbstractPreferences faker = null;
+        AbstractPreferences faker;
+        faker = null;
+        var name1 = faker.name();
+        String name = name1;
         new Faker(new Locale("ru-RU"));
         $("[name='name']").setValue(DataGenerator.getUserName("['Вася Вася']"));
     }
