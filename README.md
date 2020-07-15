@@ -1,2 +1,2 @@
 # Patterns
-[![Build status](https://ci.appveyor.com/api/projects/status/4m2n8vwose40k2dm?svg=true)](https://ci.appveyor.com/project/AlikAskat/patterns)
+[![Build status](https://ci.appveyor.com/api/projects/status/8ic7xje0cq4v32xc?svg=true)](https://ci.appveyor.com/project/AlikAskat/patterns)
