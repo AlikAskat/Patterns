@@ -6,7 +6,6 @@ import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Test;
 
 import java.util.Locale;
-import java.util.prefs.AbstractPreferences;
 
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
@@ -16,8 +15,8 @@ class DataGeneratorTest {
 
     @Test
     public void getUserName() {
-        AbstractPreferences faker = null;
-        faker.name();
+//        AbstractPreferences faker = null;
+//        faker.name();
         new Faker(new Locale("ru-RU"));
         $("[name='name']").setValue(DataGenerator.getUserName("['Вася Вася']"));
     }
