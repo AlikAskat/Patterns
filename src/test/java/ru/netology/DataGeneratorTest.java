@@ -36,5 +36,4 @@ class DataGeneratorTest {
         $("[data-test-id='notification']").waitUntil(Condition.visible, 15000);
     }
 
-
 }
