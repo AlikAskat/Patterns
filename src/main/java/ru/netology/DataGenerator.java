@@ -5,7 +5,7 @@ public class DataGenerator {
 
     public static String getUserName(String s) {
         string = s;
-        return null;
+        return  "Вася Вася";
     }
 
 }
