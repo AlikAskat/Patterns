@@ -15,7 +15,7 @@ import static com.codeborne.selenide.Selenide.open;
 class DataGeneratorTest {
 
     @Test
-    public void getUserName(String вася_вася) {
+    public void getUserName() {
         AbstractPreferences faker = null;
         faker.name();
         new Faker(new Locale("ru-RU"));
