@@ -18,7 +18,7 @@ public class DataGenerator {
         return faker.name().lastName() + " " + faker.name().firstName();
     }
     public static String getPhoneNumber() {
-//        return faker.phoneNumber();
+
         FakeValuesService fakeValuesService = new FakeValuesService(
                 new Locale("ru"), new RandomService());
 
