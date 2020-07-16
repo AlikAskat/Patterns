@@ -1,14 +1,21 @@
 package ru.netology;
 
+import com.github.javafaker.Faker;
+
+import java.util.Locale;
+
 public class DataGenerator {
-    private static String string;
+    private DataGenerator() { }
 
-    public static String getUserName(String s) {
-        string = s;
-        return  "Вася Вася";
+    public static class getUserName {
+        private getUserName() { }
+        public static getUserName generateData (String locale) {
+            Faker faker = new Faker(new Locale("ru"));
+        }
+
+
+
     }
-
 }
-
 
 
