@@ -26,7 +26,7 @@ class DataGeneratorTest {
         $( "[class='checkbox__box']" ).click();
         $( "[type='button']" ).click();
         $( byText( "Забронировать" ) ).click();
-        $( "[data-test-id='notification']" ).waitUntil( Condition.visible, 10000 );
+        $( "[data-test-id='notification']" ).waitUntil( Condition.visible, 15000 );
     }
 
 
