@@ -34,7 +34,7 @@ class DataGeneratorTest {
         SelenideElement form = $( "[class='App_appContainer__3jRx1']" );
         form.$( "[placeholder='Город']" ).setValue( "Тамбов" );
         //form.$("[name='name']").setValue("Вася Вася");
-        $( "[name='name']" ).setValue( DataGenerator.getUserName( "['Вася Вася']" ) );
+        $( "[name='name']" ).setValue( String.valueOf( new DataGenerator.getUserName( "['Вася Вася']" ) ) );
         form.$( "[name='phone']" ).setValue( "+79120000000" );
         form.$( "[class='checkbox__box']" ).click();
         form.$( "[type='button']" ).click();
