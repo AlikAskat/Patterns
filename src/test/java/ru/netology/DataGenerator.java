@@ -13,7 +13,7 @@ public class DataGenerator {
         }
 
         public static getUserName setValue(String locale) {
-            Faker faker = new Faker( new Locale( "ru" ) );
+            Faker faker = new Faker( new Locale( "ru-RU" ) );
             return new getUserName(
                     faker.name().fullName()
             );
