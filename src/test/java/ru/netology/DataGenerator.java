@@ -5,14 +5,19 @@ import com.github.javafaker.Faker;
 import java.util.Locale;
 
 public class DataGenerator {
-    private DataGenerator() { }
+    private DataGenerator() {
+    }
 
     public static class getUserName {
-        private getUserName() { }
-        public static getUserName generateData (String locale) {
-            Faker faker = new Faker(new Locale("ru"));
+        getUserName(String s) {
         }
 
+        public static getUserName setValue(String locale) {
+            Faker faker = new Faker( new Locale( "ru" ) );
+            return new getUserName(
+                    faker.name().fullName()
+            );
+        }
 
 
     }
