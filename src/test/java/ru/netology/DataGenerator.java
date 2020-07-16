@@ -1,40 +1,22 @@
 package ru.netology;
-
 import com.github.javafaker.Faker;
-
 import java.util.Locale;
-
 public class DataGenerator {
-    private DataGenerator() {
+    private static Faker faker = new Faker(new Locale("ru"));
+    public DataGenerator() {
     }
-
-    public static class getUserName {
-        getUserName(String s) {
-        }
-
-
-        public static getUserName setValue(String locale) {
-            Faker faker = new Faker( new Locale( "ru-RU" ) );
-            return new getUserName(
-                    faker.name().fullName()
-
-            );
-        }
-
-        public static class phoneNumber {
-            Faker faker = new Faker( new Locale( "ru-RU" ) );
-            phoneNumber(String s) {
-            }
-
-        }
-
-
-        public static class cityName {
-            Faker faker = new Faker( new Locale( "ru-RU" ) );
-            public cityName(String s) {
-            }
-        }
+    public static String getUserName() {
+        return faker.name().lastName() + " " + faker.name().firstName();
+    }
+    public static String getPhoneNumber() {
+        return faker.phoneNumber().phoneNumber();
+    }
+    public static String getCity() {
+        String[] cities = new String[]{"Москва", "Воронеж", "Краснодар", "Владивосток"};
+        int itemIndex = (int) (Math.random() * cities.length);
+        return cities[itemIndex];
     }
 }
+
 
 
